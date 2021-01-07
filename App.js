@@ -3,13 +3,14 @@ import {
     StyleSheet,
     Text,
     View,
-    SafeAreaView,
+    StatusBar,
     ImageBackground,
 } from "react-native";
 
 export default function App() {
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
+            <StatusBar barStyle="light-content" />
             <View style={styles.header}>
                 <ImageBackground
                     source={require("./assests/images/header.png")}
@@ -19,7 +20,7 @@ export default function App() {
             <View style={styles.footer}>
                 <Text>Footer</Text>
             </View>
-        </SafeAreaView>
+        </View>
     );
 }
 
