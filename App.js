@@ -5,6 +5,7 @@ import {
     View,
     StatusBar,
     ImageBackground,
+    TextInput,
 } from "react-native";
 
 const App = () => {
@@ -23,7 +24,24 @@ const App = () => {
             </View>
 
             <View style={styles.footer}>
-                <Text>Footer</Text>
+                <View style={styles.inputGroup}>
+                    <Text style={styles.label}>Email</Text>
+                    <View style={styles.action}>
+                        <TextInput
+                            placeholder="Your email address"
+                            style={styles.textInput}
+                        />
+                    </View>
+                </View>
+                <View style={styles.inputGroup}>
+                    <Text style={styles.label}>Email</Text>
+                    <View style={styles.action}>
+                        <TextInput
+                            placeholder="Your email address"
+                            style={styles.textInput}
+                        />
+                    </View>
+                </View>
             </View>
         </View>
     );
@@ -60,6 +78,27 @@ const styles = StyleSheet.create({
     signInText: {
         color: "yellow",
         fontSize: 16,
+    },
+
+    label: {
+        fontSize: 16,
+        fontWeight: "bold",
+    },
+
+    inputGroup: {
+        marginVertical: 20,
+    },
+    action: {
+        flexDirection: "row",
+        borderBottomColor: "#f2f2f2",
+        borderBottomWidth: 1,
+    },
+
+    textInput: {
+        flex: 1,
+        marginTop: 5,
+        paddingBottom: 5,
+        color: "gray",
     },
 });
 
